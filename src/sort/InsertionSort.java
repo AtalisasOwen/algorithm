@@ -8,6 +8,7 @@ public class InsertionSort extends Sort {
     public void sort(Comparable[] a) {
         int n=a.length;
         for(int i=1;i<n;i++){
+            //不断比较元素与之前的元素，插入合适的位置
             for(int j=i;j>0 && less(a[j],a[j-1]);j--) {
                 exchanged(a,j,j-1);
             }
