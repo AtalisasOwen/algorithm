@@ -31,7 +31,7 @@ public class UnorderedArrayMaxPQ<Key extends Comparable<Key>> {
     //无序优先队列，加到数组的最后
     public void insert(Key x)  { pq[n++] = x;   }
 
-    
+
     //选择排序的方式，把最大元素放到数组末尾并删除返回
     public Key delMax() {
         int max = 0;
