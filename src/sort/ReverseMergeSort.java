@@ -31,9 +31,11 @@ public class ReverseMergeSort extends Sort {
             sz=8
             merge(a,0,7,15)
          */
-        for(int sz=1;sz<N;sz=sz+sz){
+        for(int sz=1;sz<N;sz*=2){
             for(int low=0;low<N-sz;low+=sz+sz){
-                merge(a,low,low+sz-1,Math.min(low+sz+sz-1,N-1));
+                int mid=low+sz-1;
+                int high=Math.min(low+sz+sz-1,N-1);
+                merge(a,low,mid,high);
             }
         }
     }

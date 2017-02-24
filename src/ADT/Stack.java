@@ -1,6 +1,7 @@
 package ADT;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 /**
  * Created by 顾文涛 on 2017/2/21.
@@ -32,6 +33,11 @@ public class Stack<Item> implements Iterable<Item> {
         first=first.next;
         N--;
         return item;
+    }
+
+    public Item peek() {
+        if (isEmpty()) throw new NoSuchElementException("Stack underflow");
+        return first.item;
     }
 
     @Override
