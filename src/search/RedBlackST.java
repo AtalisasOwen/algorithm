@@ -245,7 +245,7 @@ public class RedBlackST<Key extends Comparable<Key>, Value> {
         if (x.left == null) return x;
         else                return min(x.left);
     }
-    
+
     public Key max() {
         if (isEmpty()) throw new NoSuchElementException("called max() with empty symbol table");
         return max(root).key;
